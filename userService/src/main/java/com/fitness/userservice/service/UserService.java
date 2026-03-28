@@ -29,17 +29,17 @@ public class UserService {
         // Мы обновили поля User, теперь нужно сохрнать его в бд
         // Для этого нужно использовать Repository
         User savedUser = repository.save(user);
-        return convertToUserResponse(user);
+        return mapToResponse(user);
     }
 
     public UserResponse getUserProfile(String userId) {
         User user = repository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User is not exists!"));
 
-        return convertToUserResponse(user);
+        return mapToResponse(user);
     }
 
-    private UserResponse convertToUserResponse(User user){
+    private UserResponse mapToResponse(User user){
         UserResponse userResponse = new UserResponse();
 
         userResponse.setId(user.getId());
