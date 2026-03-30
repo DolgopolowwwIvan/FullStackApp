@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="aiService" />
       </profile>
       <profile name="Annotation profile for eureka" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -32,6 +33,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="activityService" options="-parameters" />
+      <module name="aiService" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="userService" options="-parameters" />
     </option>
